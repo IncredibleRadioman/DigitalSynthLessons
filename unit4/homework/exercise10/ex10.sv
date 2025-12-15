@@ -3,7 +3,7 @@ module ex10(
     output logic y
 );
 
-    assign p = ~b & (a | c);
+    assign p = ~b & (a | ~c);
     assign q = ~a & b & c;
 
     mux4 #(1) logic_mux(1'b0, 1'b1, 1'b1, 1'b1,
