@@ -37,7 +37,7 @@ module testbench();
 
     func1 dut1(a,b,c,y1);
     func2 dut2(a,b,c,y2);
-    func3 dut3(a,b,c,y3);
+    func3 dut3(a,b,c,d,y3);
 
     //  clocks
     always begin
@@ -55,19 +55,30 @@ module testbench();
     //  send test value and calculate answer
     always @(posedge clk) begin
         #1; {a, b, c, d} = num;
-    y1 = a & c | ~a & ~b & c;
-    y2 = ~a & ~b | ~a & b & ~c | ~(a | ~c);
-    y3 = ~a & ~b & ~c & ~d | a & ~b & ~c | a & ~b & c & ~d | a & b & d | ~a & ~b & c & ~d | b & ~c & d | ~a;
+    y1_ex = a & c | ~a & ~b & c;
+    y2_ex = ~a & ~b | ~a & b & ~c | ~(a | ~c);
+    y3_ex = ~a & ~b & ~c & ~d | a & ~b & ~c | a & ~b & c & ~d | a & b & d | ~a & ~b & c & ~d | b & ~c & d | ~a;
         
     end
 
     //  check results after negedge clk
     always @(negedge clk) begin
         if (~reset) begin
-            
-            if (y !== yexpected) begin
-                $display("Error: abc = %b%b%b, y = %b (%b expected)", 
-                    a, b, c, y, yexpected);
+            if (y1 !== y1_ex) begin
+                $display("Error logic1: abc = %b%b%b, y = %b (%b expected)", 
+                    a, b, c, y1, y1_ex);
+                errors = errors + 1;
+            end
+
+            if (y2 !== y2_ex) begin
+                $display("Error logic2: abc = %b%b%b, y = %b (%b expected)", 
+                    a, b, c, y2, y2_ex);
+                errors = errors + 1;
+            end
+
+            if (y3 !== y3_ex) begin
+                $display("Error logic3: abc = %b%b%b, y = %b (%b expected)", 
+                    a, b, c, y3, y3_ex);
                 errors = errors + 1;
             end
 
