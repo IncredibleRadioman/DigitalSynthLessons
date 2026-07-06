@@ -1,0 +1,72 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x5604494f1090 .scope module, "lab1" "lab1" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "KEY"
+    .port_info 1 /OUTPUT 10 "LED"
+L_0x56044953d700 .functor NOT 1, L_0x56044953d630, C4<0>, C4<0>, C4<0>;
+L_0x56044953d890 .functor NOT 1, L_0x56044953d7a0, C4<0>, C4<0>, C4<0>;
+L_0x56044953d950 .functor AND 1, L_0x56044953d700, L_0x56044953d890, C4<1>, C4<1>;
+L_0x56044953da60 .functor OR 1, L_0x56044953d700, L_0x56044953d890, C4<0>, C4<0>;
+L_0x56044953db00 .functor NOT 1, L_0x56044953d700, C4<0>, C4<0>, C4<0>;
+L_0x56044953db70 .functor XOR 1, L_0x56044953d700, L_0x56044953d890, C4<0>, C4<0>;
+L_0x56044953dce0 .functor OR 1, L_0x56044953d700, L_0x56044953d890, C4<0>, C4<0>;
+L_0x56044953dd50 .functor AND 1, L_0x56044953d700, L_0x56044953d890, C4<1>, C4<1>;
+L_0x56044953de40 .functor NOT 1, L_0x56044953dd50, C4<0>, C4<0>, C4<0>;
+L_0x56044953dee0 .functor AND 1, L_0x56044953dce0, L_0x56044953de40, C4<1>, C4<1>;
+L_0x7f6f0cd8d018 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x56044953e000 .functor XOR 1, L_0x56044953d700, L_0x7f6f0cd8d018, C4<0>, C4<0>;
+L_0x56044953e180 .functor AND 1, L_0x56044953d700, L_0x56044953d890, C4<1>, C4<1>;
+L_0x56044953e260 .functor NOT 1, L_0x56044953e180, C4<0>, C4<0>, C4<0>;
+L_0x56044953e350 .functor NOT 1, L_0x56044953d700, C4<0>, C4<0>, C4<0>;
+L_0x56044953e1f0 .functor NOT 1, L_0x56044953d890, C4<0>, C4<0>, C4<0>;
+L_0x56044953e580 .functor OR 1, L_0x56044953e350, L_0x56044953e1f0, C4<0>, C4<0>;
+L_0x56044953e750 .functor OR 1, L_0x56044953d700, L_0x56044953d890, C4<0>, C4<0>;
+L_0x56044953e7c0 .functor NOT 1, L_0x56044953e750, C4<0>, C4<0>, C4<0>;
+L_0x56044953ec90 .functor NOT 1, L_0x56044953d700, C4<0>, C4<0>, C4<0>;
+L_0x56044953ed00 .functor NOT 1, L_0x56044953d890, C4<0>, C4<0>, C4<0>;
+L_0x56044953ee20 .functor AND 1, L_0x56044953ec90, L_0x56044953ed00, C4<1>, C4<1>;
+o0x7f6f0cdd6018 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x560449518460_0 .net "KEY", 1 0, o0x7f6f0cdd6018;  0 drivers
+v0x560449517b60_0 .net "LED", 9 0, L_0x56044953e920;  1 drivers
+v0x560449504610_0 .net *"_s1", 0 0, L_0x56044953d630;  1 drivers
+v0x560449504100_0 .net *"_s10", 0 0, L_0x56044953d950;  1 drivers
+v0x560449503b80_0 .net *"_s14", 0 0, L_0x56044953da60;  1 drivers
+v0x560449503570_0 .net *"_s18", 0 0, L_0x56044953db00;  1 drivers
+v0x56044953c380_0 .net *"_s22", 0 0, L_0x56044953db70;  1 drivers
+v0x56044953c460_0 .net *"_s26", 0 0, L_0x56044953dce0;  1 drivers
+v0x56044953c540_0 .net *"_s28", 0 0, L_0x56044953dd50;  1 drivers
+v0x56044953c620_0 .net *"_s30", 0 0, L_0x56044953de40;  1 drivers
+v0x56044953c700_0 .net *"_s32", 0 0, L_0x56044953dee0;  1 drivers
+v0x56044953c7e0_0 .net/2u *"_s36", 0 0, L_0x7f6f0cd8d018;  1 drivers
+v0x56044953c8c0_0 .net *"_s38", 0 0, L_0x56044953e000;  1 drivers
+v0x56044953c9a0_0 .net *"_s42", 0 0, L_0x56044953e180;  1 drivers
+v0x56044953ca80_0 .net *"_s44", 0 0, L_0x56044953e260;  1 drivers
+v0x56044953cb60_0 .net *"_s48", 0 0, L_0x56044953e350;  1 drivers
+v0x56044953cc40_0 .net *"_s5", 0 0, L_0x56044953d7a0;  1 drivers
+v0x56044953ce30_0 .net *"_s50", 0 0, L_0x56044953e1f0;  1 drivers
+v0x56044953cf10_0 .net *"_s52", 0 0, L_0x56044953e580;  1 drivers
+v0x56044953cff0_0 .net *"_s56", 0 0, L_0x56044953e750;  1 drivers
+v0x56044953d0d0_0 .net *"_s58", 0 0, L_0x56044953e7c0;  1 drivers
+v0x56044953d1b0_0 .net *"_s63", 0 0, L_0x56044953ec90;  1 drivers
+v0x56044953d290_0 .net *"_s65", 0 0, L_0x56044953ed00;  1 drivers
+v0x56044953d370_0 .net *"_s67", 0 0, L_0x56044953ee20;  1 drivers
+v0x56044953d450_0 .net "a", 0 0, L_0x56044953d700;  1 drivers
+v0x56044953d510_0 .net "b", 0 0, L_0x56044953d890;  1 drivers
+L_0x56044953d630 .part o0x7f6f0cdd6018, 0, 1;
+L_0x56044953d7a0 .part o0x7f6f0cdd6018, 1, 1;
+LS_0x56044953e920_0_0 .concat8 [ 1 1 1 1], L_0x56044953d950, L_0x56044953da60, L_0x56044953db00, L_0x56044953db70;
+LS_0x56044953e920_0_4 .concat8 [ 1 1 1 1], L_0x56044953dee0, L_0x56044953e000, L_0x56044953e260, L_0x56044953e580;
+LS_0x56044953e920_0_8 .concat8 [ 1 1 0 0], L_0x56044953e7c0, L_0x56044953ee20;
+L_0x56044953e920 .concat8 [ 4 4 2 0], LS_0x56044953e920_0_0, LS_0x56044953e920_0_4, LS_0x56044953e920_0_8;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/incredibleradioman/repos/DigitalSynthLessons/panchul/unit1/lab1.sv";

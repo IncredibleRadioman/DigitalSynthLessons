@@ -1,0 +1,16 @@
+toplevel: adder
+name: riscvonecycle
+files: 
+  - name: "adder.sv"
+    file_type: systemVerilogSource
+    is_include_file: false
+    include_path: ""
+    logical_name: ""
+tool_options: 
+  icarus: 
+    installation_path: "/home/incredibleradioman/iverilog/bin"
+    timescale: ""
+    iverilog_options: 
+      - ""
+    linter_options: 
+      - ""
