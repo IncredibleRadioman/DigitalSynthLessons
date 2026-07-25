@@ -1,0 +1,98 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55d2ac22a400 .scope module, "dec_6_64" "dec_6_64" 2 12;
+ .timescale 0 0;
+    .port_info 0 /INPUT 6 "binary_in"
+    .port_info 1 /OUTPUT 64 "decoder_out"
+    .port_info 2 /INPUT 1 "enable"
+L_0x7f42f3b41018 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac2655b0_0 .net/2s *"_s0", 3 0, L_0x7f42f3b41018;  1 drivers
+v0x55d2ac265690_0 .net *"_s3", 1 0, L_0x55d2ac265b80;  1 drivers
+o0x7f42f3b8a738 .functor BUFZ 6, C4<zzzzzz>; HiZ drive
+v0x55d2ac265770_0 .net "binary_in", 5 0, o0x7f42f3b8a738;  0 drivers
+v0x55d2ac265830_0 .net "decoder_out", 63 0, L_0x55d2ac276f60;  1 drivers
+v0x55d2ac265910_0 .net "en_signals", 3 0, L_0x55d2ac265c20;  1 drivers
+o0x7f42f3b8a7c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55d2ac265a40_0 .net "enable", 0 0, o0x7f42f3b8a7c8;  0 drivers
+L_0x55d2ac265b80 .part o0x7f42f3b8a738, 4, 2;
+L_0x55d2ac265c20 .shift/l 4, L_0x7f42f3b41018, L_0x55d2ac265b80;
+L_0x55d2ac276060 .part o0x7f42f3b8a738, 0, 4;
+L_0x55d2ac2761a0 .part L_0x55d2ac265c20, 0, 1;
+L_0x55d2ac276590 .part o0x7f42f3b8a738, 0, 4;
+L_0x55d2ac276680 .part L_0x55d2ac265c20, 1, 1;
+L_0x55d2ac2769e0 .part o0x7f42f3b8a738, 0, 4;
+L_0x55d2ac276ad0 .part L_0x55d2ac265c20, 2, 1;
+L_0x55d2ac276e70 .part o0x7f42f3b8a738, 0, 4;
+L_0x55d2ac276f60 .concat8 [ 16 16 16 16], L_0x55d2ac275ec0, L_0x55d2ac276450, L_0x55d2ac2768a0, L_0x55d2ac276d80;
+L_0x55d2ac2771a0 .part L_0x55d2ac265c20, 3, 1;
+S_0x55d2ac2411c0 .scope module, "dec_0_15" "dec_4_16" 2 24, 2 1 0, S_0x55d2ac22a400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary_in"
+    .port_info 1 /OUTPUT 16 "decoder_out"
+    .port_info 2 /INPUT 1 "enable"
+L_0x7f42f3b41060 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac23f470_0 .net/2u *"_s0", 15 0, L_0x7f42f3b41060;  1 drivers
+v0x55d2ac23d980_0 .net *"_s2", 15 0, L_0x55d2ac275d70;  1 drivers
+L_0x7f42f3b410a8 .functor BUFT 1, C4<0000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac23bc50_0 .net/2u *"_s4", 15 0, L_0x7f42f3b410a8;  1 drivers
+v0x55d2ac263a50_0 .net "binary_in", 3 0, L_0x55d2ac276060;  1 drivers
+v0x55d2ac263b30_0 .net "decoder_out", 15 0, L_0x55d2ac275ec0;  1 drivers
+v0x55d2ac263c60_0 .net "enable", 0 0, L_0x55d2ac2761a0;  1 drivers
+L_0x55d2ac275d70 .shift/l 16, L_0x7f42f3b41060, L_0x55d2ac276060;
+L_0x55d2ac275ec0 .functor MUXZ 16, L_0x7f42f3b410a8, L_0x55d2ac275d70, L_0x55d2ac2761a0, C4<>;
+S_0x55d2ac263da0 .scope module, "dec_16_31" "dec_4_16" 2 31, 2 1 0, S_0x55d2ac22a400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary_in"
+    .port_info 1 /OUTPUT 16 "decoder_out"
+    .port_info 2 /INPUT 1 "enable"
+L_0x7f42f3b410f0 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac263fc0_0 .net/2u *"_s0", 15 0, L_0x7f42f3b410f0;  1 drivers
+v0x55d2ac2640c0_0 .net *"_s2", 15 0, L_0x55d2ac276310;  1 drivers
+L_0x7f42f3b41138 .functor BUFT 1, C4<0000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac2641a0_0 .net/2u *"_s4", 15 0, L_0x7f42f3b41138;  1 drivers
+v0x55d2ac264260_0 .net "binary_in", 3 0, L_0x55d2ac276590;  1 drivers
+v0x55d2ac264340_0 .net "decoder_out", 15 0, L_0x55d2ac276450;  1 drivers
+v0x55d2ac264470_0 .net "enable", 0 0, L_0x55d2ac276680;  1 drivers
+L_0x55d2ac276310 .shift/l 16, L_0x7f42f3b410f0, L_0x55d2ac276590;
+L_0x55d2ac276450 .functor MUXZ 16, L_0x7f42f3b41138, L_0x55d2ac276310, L_0x55d2ac276680, C4<>;
+S_0x55d2ac2645b0 .scope module, "dec_32_47" "dec_4_16" 2 38, 2 1 0, S_0x55d2ac22a400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary_in"
+    .port_info 1 /OUTPUT 16 "decoder_out"
+    .port_info 2 /INPUT 1 "enable"
+L_0x7f42f3b41180 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac2647d0_0 .net/2u *"_s0", 15 0, L_0x7f42f3b41180;  1 drivers
+v0x55d2ac2648b0_0 .net *"_s2", 15 0, L_0x55d2ac2767b0;  1 drivers
+L_0x7f42f3b411c8 .functor BUFT 1, C4<0000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac264990_0 .net/2u *"_s4", 15 0, L_0x7f42f3b411c8;  1 drivers
+v0x55d2ac264a50_0 .net "binary_in", 3 0, L_0x55d2ac2769e0;  1 drivers
+v0x55d2ac264b30_0 .net "decoder_out", 15 0, L_0x55d2ac2768a0;  1 drivers
+v0x55d2ac264c60_0 .net "enable", 0 0, L_0x55d2ac276ad0;  1 drivers
+L_0x55d2ac2767b0 .shift/l 16, L_0x7f42f3b41180, L_0x55d2ac2769e0;
+L_0x55d2ac2768a0 .functor MUXZ 16, L_0x7f42f3b411c8, L_0x55d2ac2767b0, L_0x55d2ac276ad0, C4<>;
+S_0x55d2ac264da0 .scope module, "dec_48_63" "dec_4_16" 2 45, 2 1 0, S_0x55d2ac22a400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary_in"
+    .port_info 1 /OUTPUT 16 "decoder_out"
+    .port_info 2 /INPUT 1 "enable"
+L_0x7f42f3b41210 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac264fc0_0 .net/2u *"_s0", 15 0, L_0x7f42f3b41210;  1 drivers
+v0x55d2ac2650c0_0 .net *"_s2", 15 0, L_0x55d2ac276c50;  1 drivers
+L_0x7f42f3b41258 .functor BUFT 1, C4<0000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55d2ac2651a0_0 .net/2u *"_s4", 15 0, L_0x7f42f3b41258;  1 drivers
+v0x55d2ac265260_0 .net "binary_in", 3 0, L_0x55d2ac276e70;  1 drivers
+v0x55d2ac265340_0 .net "decoder_out", 15 0, L_0x55d2ac276d80;  1 drivers
+v0x55d2ac265470_0 .net "enable", 0 0, L_0x55d2ac2771a0;  1 drivers
+L_0x55d2ac276c50 .shift/l 16, L_0x7f42f3b41210, L_0x55d2ac276e70;
+L_0x55d2ac276d80 .functor MUXZ 16, L_0x7f42f3b41258, L_0x55d2ac276c50, L_0x55d2ac2771a0, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/incredibleradioman/repos/DigitalSynthLessons/panchul/unit3/dec_6_64/dec_6_64.sv";
