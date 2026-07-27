@@ -1,0 +1,33 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x562c87e5c170 .scope module, "b1_mux_2_1_comb" "b1_mux_2_1_comb" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d0"
+    .port_info 1 /INPUT 1 "d1"
+    .port_info 2 /INPUT 1 "sel"
+    .port_info 3 /OUTPUT 1 "y"
+o0x7f1394ef4108 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7f1394ef40d8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x562c87e9f410 .functor AND 1, o0x7f1394ef4108, o0x7f1394ef40d8, C4<1>, C4<1>;
+L_0x562c87e9f500 .functor NOT 1, o0x7f1394ef4108, C4<0>, C4<0>, C4<0>;
+o0x7f1394ef40a8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x562c87e9f5f0 .functor AND 1, L_0x562c87e9f500, o0x7f1394ef40a8, C4<1>, C4<1>;
+L_0x562c87e9f6b0 .functor OR 1, L_0x562c87e9f410, L_0x562c87e9f5f0, C4<0>, C4<0>;
+v0x562c87e5c360_0 .net *"_s0", 0 0, L_0x562c87e9f410;  1 drivers
+v0x562c87e9ee70_0 .net *"_s2", 0 0, L_0x562c87e9f500;  1 drivers
+v0x562c87e9ef50_0 .net *"_s4", 0 0, L_0x562c87e9f5f0;  1 drivers
+v0x562c87e9f040_0 .net "d0", 0 0, o0x7f1394ef40a8;  0 drivers
+v0x562c87e9f100_0 .net "d1", 0 0, o0x7f1394ef40d8;  0 drivers
+v0x562c87e9f210_0 .net "sel", 0 0, o0x7f1394ef4108;  0 drivers
+v0x562c87e9f2d0_0 .net "y", 0 0, L_0x562c87e9f6b0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/incredibleradioman/repos/DigitalSynthLessons/panchul/unit4/b1_mux_2_1/b1_mux_2_1_comb.sv";

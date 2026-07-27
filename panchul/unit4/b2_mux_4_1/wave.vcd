@@ -1,0 +1,304 @@
+$date
+	Mon Jul 27 03:42:49 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 2 ! y_sel [1:0] $end
+$var wire 2 " y_case [1:0] $end
+$var wire 2 # y_block_alt [1:0] $end
+$var wire 2 $ y_block [1:0] $end
+$var reg 2 % a [1:0] $end
+$var reg 2 & b [1:0] $end
+$var reg 2 ' c [1:0] $end
+$var reg 2 ( d [1:0] $end
+$var reg 2 ) sel [1:0] $end
+$scope module dut0 $end
+$var wire 2 * d0 [1:0] $end
+$var wire 2 + d1 [1:0] $end
+$var wire 2 , d2 [1:0] $end
+$var wire 2 - d3 [1:0] $end
+$var wire 2 . sel [1:0] $end
+$var wire 2 / y [1:0] $end
+$upscope $end
+$scope module dut1 $end
+$var wire 2 0 d0 [1:0] $end
+$var wire 2 1 d1 [1:0] $end
+$var wire 2 2 d2 [1:0] $end
+$var wire 2 3 d3 [1:0] $end
+$var wire 2 4 sel [1:0] $end
+$var wire 2 5 y [1:0] $end
+$var wire 2 6 w23 [1:0] $end
+$var wire 2 7 w01 [1:0] $end
+$scope module mux0 $end
+$var wire 2 8 d0 [1:0] $end
+$var wire 2 9 d1 [1:0] $end
+$var wire 1 : sel $end
+$var wire 2 ; y [1:0] $end
+$upscope $end
+$scope module mux1 $end
+$var wire 2 < d0 [1:0] $end
+$var wire 2 = d1 [1:0] $end
+$var wire 1 > sel $end
+$var wire 2 ? y [1:0] $end
+$upscope $end
+$scope module mux2 $end
+$var wire 2 @ d0 [1:0] $end
+$var wire 2 A d1 [1:0] $end
+$var wire 1 B sel $end
+$var wire 2 C y [1:0] $end
+$upscope $end
+$upscope $end
+$scope module dut2 $end
+$var wire 2 D d0 [1:0] $end
+$var wire 2 E d1 [1:0] $end
+$var wire 2 F d2 [1:0] $end
+$var wire 2 G d3 [1:0] $end
+$var wire 2 H sel [1:0] $end
+$var wire 2 I y [1:0] $end
+$scope module hi $end
+$var wire 1 J d0 $end
+$var wire 1 K d1 $end
+$var wire 1 L d2 $end
+$var wire 1 M d3 $end
+$var wire 2 N sel [1:0] $end
+$var reg 1 O y $end
+$upscope $end
+$scope module lo $end
+$var wire 1 P d0 $end
+$var wire 1 Q d1 $end
+$var wire 1 R d2 $end
+$var wire 1 S d3 $end
+$var wire 2 T sel [1:0] $end
+$var reg 1 U y $end
+$upscope $end
+$upscope $end
+$scope module dut3 $end
+$var wire 2 V d0 [1:0] $end
+$var wire 2 W d1 [1:0] $end
+$var wire 2 X d2 [1:0] $end
+$var wire 2 Y d3 [1:0] $end
+$var wire 2 Z sel [1:0] $end
+$var reg 2 [ y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx [
+bx Z
+b11 Y
+b10 X
+b1 W
+b0 V
+xU
+bx T
+1S
+0R
+1Q
+0P
+xO
+bx N
+1M
+1L
+0K
+0J
+bx I
+bx H
+b11 G
+b10 F
+b1 E
+b0 D
+bx C
+xB
+b1x A
+b0x @
+b1x ?
+x>
+b11 =
+b10 <
+b0x ;
+x:
+b1 9
+b0 8
+b0x 7
+b1x 6
+bx 5
+bx 4
+b11 3
+b10 2
+b1 1
+b0 0
+bx /
+bx .
+b11 -
+b10 ,
+b1 +
+b0 *
+bx )
+b11 (
+b10 '
+b1 &
+b0 %
+bx $
+bx #
+bx "
+bx !
+$end
+#5000
+b0 !
+b0 /
+b0 7
+b0 ;
+b0 @
+b10 6
+b10 ?
+b10 A
+b0 $
+b0 5
+b0 C
+0:
+0>
+0B
+0O
+b0 #
+b0 I
+0U
+b0 "
+b0 [
+b0 )
+b0 .
+b0 4
+b0 H
+b0 N
+b0 T
+b0 Z
+#15000
+b1 !
+b1 /
+b1 $
+b1 5
+b1 C
+b1 7
+b1 ;
+b1 @
+b11 6
+b11 ?
+b11 A
+1:
+1>
+b1 #
+b1 I
+1U
+b1 "
+b1 [
+b1 )
+b1 .
+b1 4
+b1 H
+b1 N
+b1 T
+b1 Z
+#25000
+b10 !
+b10 /
+b0 7
+b0 ;
+b0 @
+b10 6
+b10 ?
+b10 A
+b10 $
+b10 5
+b10 C
+0:
+0>
+1B
+1O
+b10 #
+b10 I
+0U
+b10 "
+b10 [
+b10 )
+b10 .
+b10 4
+b10 H
+b10 N
+b10 T
+b10 Z
+#35000
+b11 !
+b11 /
+b11 $
+b11 5
+b11 C
+b1 7
+b1 ;
+b1 @
+b11 6
+b11 ?
+b11 A
+1:
+1>
+b11 #
+b11 I
+1U
+b11 "
+b11 [
+b11 )
+b11 .
+b11 4
+b11 H
+b11 N
+b11 T
+b11 Z
+#45000
+b10 !
+b10 /
+b10 $
+b10 5
+b10 C
+b10 #
+b10 I
+0U
+b10 6
+b10 ?
+b10 A
+0S
+b10 "
+b10 [
+b10 (
+b10 -
+b10 3
+b10 =
+b10 G
+b10 Y
+#50000
+b1 !
+b1 /
+b1 $
+b1 5
+b1 C
+0O
+b1 #
+b1 I
+1U
+b1 6
+b1 ?
+b1 A
+0M
+1S
+b1 "
+b1 [
+b1 (
+b1 -
+b1 3
+b1 =
+b1 G
+b1 Y
+#55000

@@ -1,0 +1,162 @@
+$date
+	Mon Jul 27 15:40:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 8 ! y_if [7:0] $end
+$var wire 8 " y [7:0] $end
+$var reg 8 # d0 [7:0] $end
+$var reg 8 $ d1 [7:0] $end
+$var reg 8 % d2 [7:0] $end
+$var reg 8 & d3 [7:0] $end
+$var reg 8 ' d4 [7:0] $end
+$var reg 8 ( d5 [7:0] $end
+$var reg 8 ) d6 [7:0] $end
+$var reg 8 * d7 [7:0] $end
+$var reg 8 + sel [7:0] $end
+$scope module dut1 $end
+$var wire 8 , d0 [7:0] $end
+$var wire 8 - d1 [7:0] $end
+$var wire 8 . d2 [7:0] $end
+$var wire 8 / d3 [7:0] $end
+$var wire 8 0 d4 [7:0] $end
+$var wire 8 1 d5 [7:0] $end
+$var wire 8 2 d6 [7:0] $end
+$var wire 8 3 d7 [7:0] $end
+$var wire 8 4 sel [7:0] $end
+$var reg 8 5 y [7:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 8 6 d0 [7:0] $end
+$var wire 8 7 d1 [7:0] $end
+$var wire 8 8 d2 [7:0] $end
+$var wire 8 9 d3 [7:0] $end
+$var wire 8 : d4 [7:0] $end
+$var wire 8 ; d5 [7:0] $end
+$var wire 8 < d6 [7:0] $end
+$var wire 8 = d7 [7:0] $end
+$var wire 8 > sel [7:0] $end
+$var reg 8 ? y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ?
+bx >
+b111 =
+b110 <
+b101 ;
+b100 :
+b11 9
+b10 8
+b1 7
+b0 6
+bx 5
+bx 4
+b111 3
+b110 2
+b101 1
+b100 0
+b11 /
+b10 .
+b1 -
+b0 ,
+bx +
+b111 *
+b110 )
+b101 (
+b100 '
+b11 &
+b10 %
+b1 $
+b0 #
+bx "
+bx !
+$end
+#5000
+b0 "
+b0 5
+b0 !
+b0 ?
+b1 +
+b1 4
+b1 >
+#15000
+b1 !
+b1 ?
+b1 "
+b1 5
+b10 +
+b10 4
+b10 >
+#25000
+b10 "
+b10 5
+b10 !
+b10 ?
+b100 +
+b100 4
+b100 >
+#35000
+b11 !
+b11 ?
+b11 "
+b11 5
+b1000 +
+b1000 4
+b1000 >
+#45000
+b100 "
+b100 5
+b100 !
+b100 ?
+b10000 +
+b10000 4
+b10000 >
+#55000
+b101 !
+b101 ?
+b101 "
+b101 5
+b100000 +
+b100000 4
+b100000 >
+#65000
+b110 "
+b110 5
+b110 !
+b110 ?
+b1000000 +
+b1000000 4
+b1000000 >
+#75000
+b111 !
+b111 ?
+b111 "
+b111 5
+b10000000 +
+b10000000 4
+b10000000 >
+#85000
+b1111011 "
+b1111011 5
+b1111011 !
+b1111011 ?
+b1111011 *
+b1111011 3
+b1111011 =
+#95000
+b1001101 !
+b1001101 ?
+b1001101 "
+b1001101 5
+b1001101 *
+b1001101 3
+b1001101 =
+#105000

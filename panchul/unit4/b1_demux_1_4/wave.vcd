@@ -1,0 +1,202 @@
+$date
+	Mon Jul 27 15:04:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 8 ! dout3_case [7:0] $end
+$var wire 2 " dout3_block [1:0] $end
+$var wire 8 # dout2_case [7:0] $end
+$var wire 2 $ dout2_block [1:0] $end
+$var wire 8 % dout1_case [7:0] $end
+$var wire 2 & dout1_block [1:0] $end
+$var wire 8 ' dout0_case [7:0] $end
+$var wire 2 ( dout0_block [1:0] $end
+$var reg 2 ) din_block [1:0] $end
+$var reg 8 * din_case [7:0] $end
+$var reg 2 + sel [1:0] $end
+$scope module dut1 $end
+$var wire 2 , din [1:0] $end
+$var wire 2 - sel [1:0] $end
+$var wire 2 . dout3 [1:0] $end
+$var wire 2 / dout2 [1:0] $end
+$var wire 2 0 dout1 [1:0] $end
+$var wire 2 1 dout0 [1:0] $end
+$scope module dmux0 $end
+$var wire 1 2 din $end
+$var wire 2 3 sel [1:0] $end
+$var reg 1 4 dout0 $end
+$var reg 1 5 dout1 $end
+$var reg 1 6 dout2 $end
+$var reg 1 7 dout3 $end
+$upscope $end
+$scope module dmux1 $end
+$var wire 1 8 din $end
+$var wire 2 9 sel [1:0] $end
+$var reg 1 : dout0 $end
+$var reg 1 ; dout1 $end
+$var reg 1 < dout2 $end
+$var reg 1 = dout3 $end
+$upscope $end
+$upscope $end
+$scope module dut2 $end
+$var wire 8 > din [7:0] $end
+$var wire 2 ? sel [1:0] $end
+$var reg 8 @ dout0 [7:0] $end
+$var reg 8 A dout1 [7:0] $end
+$var reg 8 B dout2 [7:0] $end
+$var reg 8 C dout3 [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx C
+bx B
+bx A
+bx @
+bx ?
+b11111111 >
+x=
+x<
+x;
+x:
+bx 9
+18
+x7
+x6
+x5
+x4
+bx 3
+12
+bx 1
+bx 0
+bx /
+bx .
+bx -
+b11 ,
+bx +
+b11111111 *
+b11 )
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5000
+07
+06
+05
+14
+b0 "
+b0 .
+0=
+b0 $
+b0 /
+0<
+b0 &
+b0 0
+0;
+b11 (
+b11 1
+1:
+b0 !
+b0 C
+b0 #
+b0 B
+b0 %
+b0 A
+b11111111 '
+b11111111 @
+b0 +
+b0 -
+b0 3
+b0 9
+b0 ?
+#15000
+15
+04
+b11 &
+b11 0
+1;
+b0 (
+b0 1
+0:
+b11111111 %
+b11111111 A
+b0 '
+b0 @
+b1 +
+b1 -
+b1 3
+b1 9
+b1 ?
+#25000
+16
+05
+b11 $
+b11 /
+1<
+b0 &
+b0 0
+0;
+b11111111 #
+b11111111 B
+b0 %
+b0 A
+b10 +
+b10 -
+b10 3
+b10 9
+b10 ?
+#35000
+17
+06
+b11 "
+b11 .
+1=
+b0 $
+b0 /
+0<
+b11111111 !
+b11111111 C
+b0 #
+b0 B
+b11 +
+b11 -
+b11 3
+b11 9
+b11 ?
+#45000
+b10 "
+b10 .
+07
+02
+b10101010 !
+b10101010 C
+b10 )
+b10 ,
+b10101010 *
+b10101010 >
+#55000
+17
+b1 "
+b1 .
+0=
+12
+08
+b1010101 !
+b1010101 C
+b1 )
+b1 ,
+b1010101 *
+b1010101 >
+#65000

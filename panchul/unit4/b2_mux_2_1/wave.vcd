@@ -1,0 +1,158 @@
+$date
+	Sun Jul 26 17:08:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 2 ! y_sel [1:0] $end
+$var wire 2 " y_if [1:0] $end
+$var wire 2 # y_comb_incorrect [1:0] $end
+$var wire 2 $ y_comb_correct2 [1:0] $end
+$var wire 2 % y_comb_correct1 [1:0] $end
+$var wire 2 & y_case [1:0] $end
+$var reg 2 ' d0 [1:0] $end
+$var reg 2 ( d1 [1:0] $end
+$var reg 1 ) sel $end
+$scope module dut1 $end
+$var wire 2 * d0 [1:0] $end
+$var wire 2 + d1 [1:0] $end
+$var wire 1 ) sel $end
+$var reg 2 , y [1:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 2 - d0 [1:0] $end
+$var wire 2 . d1 [1:0] $end
+$var wire 1 ) sel $end
+$var reg 2 / y [1:0] $end
+$upscope $end
+$scope module dut3 $end
+$var wire 2 0 d0 [1:0] $end
+$var wire 2 1 d1 [1:0] $end
+$var wire 1 ) sel $end
+$var wire 2 2 y [1:0] $end
+$upscope $end
+$scope module dut4 $end
+$var wire 2 3 d0 [1:0] $end
+$var wire 2 4 d1 [1:0] $end
+$var wire 1 ) sel $end
+$var wire 2 5 y [1:0] $end
+$upscope $end
+$scope module dut5 $end
+$var wire 2 6 d0 [1:0] $end
+$var wire 2 7 d1 [1:0] $end
+$var wire 1 ) sel $end
+$var wire 2 8 y [1:0] $end
+$upscope $end
+$scope module dut6 $end
+$var wire 2 9 d0 [1:0] $end
+$var wire 2 : d1 [1:0] $end
+$var wire 1 ) sel $end
+$var wire 2 ; y [1:0] $end
+$var wire 2 < select [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx <
+bx ;
+b11 :
+b0 9
+bx 8
+b11 7
+b0 6
+b0x 5
+b11 4
+b0 3
+bx 2
+b11 1
+b0 0
+b0 /
+b11 .
+b0 -
+bx ,
+b11 +
+b0 *
+x)
+b11 (
+b0 '
+bx &
+bx %
+bx $
+b0x #
+b0 "
+bx !
+$end
+#5000
+b0 #
+b0 5
+b0 %
+b0 8
+b0 $
+b0 ;
+b0 &
+b0 ,
+b0 !
+b0 2
+b0 <
+0)
+#15000
+b1 #
+b1 5
+b11 %
+b11 8
+b11 $
+b11 ;
+b11 &
+b11 ,
+b11 "
+b11 /
+b11 !
+b11 2
+b11 <
+1)
+#25000
+b10 %
+b10 8
+b0 #
+b0 5
+b10 $
+b10 ;
+b10 &
+b10 ,
+b10 "
+b10 /
+b10 !
+b10 2
+b10 (
+b10 +
+b10 .
+b10 1
+b10 4
+b10 7
+b10 :
+#30000
+b1 %
+b1 8
+b1 #
+b1 5
+b1 $
+b1 ;
+b1 &
+b1 ,
+b1 "
+b1 /
+b1 !
+b1 2
+b1 (
+b1 +
+b1 .
+b1 1
+b1 4
+b1 7
+b1 :
+#35000
