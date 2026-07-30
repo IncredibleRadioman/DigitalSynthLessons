@@ -1,0 +1,128 @@
+$date
+	Thu Jul 30 05:16:26 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 8 ! y [7:0] $end
+$var wire 64 " data [63:0] $end
+$var reg 8 # d0 [7:0] $end
+$var reg 8 $ d1 [7:0] $end
+$var reg 8 % d2 [7:0] $end
+$var reg 8 & d3 [7:0] $end
+$var reg 8 ' d4 [7:0] $end
+$var reg 8 ( d5 [7:0] $end
+$var reg 8 ) d6 [7:0] $end
+$var reg 8 * d7 [7:0] $end
+$var reg 8 + sel [7:0] $end
+$scope module dut $end
+$var wire 64 , data [63:0] $end
+$var wire 8 - sel [7:0] $end
+$var wire 8 . y [7:0] $end
+$scope begin gen_mask[0] $end
+$upscope $end
+$scope begin gen_mask[1] $end
+$upscope $end
+$scope begin gen_mask[2] $end
+$upscope $end
+$scope begin gen_mask[3] $end
+$upscope $end
+$scope begin gen_mask[4] $end
+$upscope $end
+$scope begin gen_mask[5] $end
+$upscope $end
+$scope begin gen_mask[6] $end
+$upscope $end
+$scope begin gen_mask[7] $end
+$upscope $end
+$scope begin gen_output[1] $end
+$upscope $end
+$scope begin gen_output[2] $end
+$upscope $end
+$scope begin gen_output[3] $end
+$upscope $end
+$scope begin gen_output[4] $end
+$upscope $end
+$scope begin gen_output[5] $end
+$upscope $end
+$scope begin gen_output[6] $end
+$upscope $end
+$scope begin gen_output[7] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0xxx .
+bx -
+b11100000110000001010000010000000011000000100000000100000000 ,
+bx +
+b111 *
+b110 )
+b101 (
+b100 '
+b11 &
+b10 %
+b1 $
+b0 #
+b11100000110000001010000010000000011000000100000000100000000 "
+b0xxx !
+$end
+#5000
+b0 !
+b0 .
+b1 +
+b1 -
+#15000
+b1 !
+b1 .
+b10 +
+b10 -
+#25000
+b10 !
+b10 .
+b100 +
+b100 -
+#35000
+b11 !
+b11 .
+b1000 +
+b1000 -
+#45000
+b100 !
+b100 .
+b10000 +
+b10000 -
+#55000
+b101 !
+b101 .
+b100000 +
+b100000 -
+#65000
+b110 !
+b110 .
+b1000000 +
+b1000000 -
+#75000
+b111 !
+b111 .
+b10000000 +
+b10000000 -
+#85000
+b1111011 !
+b1111011 .
+b111101100000110000001010000010000000011000000100000000100000000 "
+b111101100000110000001010000010000000011000000100000000100000000 ,
+b1111011 *
+#95000
+b1001101 !
+b1001101 .
+b100110100000110000001010000010000000011000000100000000100000000 "
+b100110100000110000001010000010000000011000000100000000100000000 ,
+b1001101 *
+#105000
