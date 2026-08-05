@@ -1,0 +1,87 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55df15a916a0 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -12;
+P_0x55df15a91820 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001000>;
+v0x55df15aa71f0_0 .var "c_in", 0 0;
+v0x55df15aa72b0_0 .net "c_out", 0 0, L_0x55df15aa75f0;  1 drivers
+v0x55df15aa7380_0 .var "x", 7 0;
+v0x55df15aa7480_0 .var "y", 7 0;
+v0x55df15aa7550_0 .net "z", 7 0, L_0x55df15aa76e0;  1 drivers
+S_0x55df15a918c0 .scope module, "adder_dut" "adder" 2 15, 3 1 0, S_0x55df15a916a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 8 "y"
+    .port_info 2 /INPUT 1 "carry_in"
+    .port_info 3 /OUTPUT 8 "z"
+    .port_info 4 /OUTPUT 1 "carry_out"
+P_0x55df15a81250 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000001000>;
+L_0x7fb5f438f060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55df15a5b130_0 .net *"_s10", 0 0, L_0x7fb5f438f060;  1 drivers
+v0x55df15aa66b0_0 .net *"_s11", 8 0, L_0x55df15aa7ad0;  1 drivers
+v0x55df15aa6790_0 .net *"_s13", 8 0, L_0x55df15aa7c10;  1 drivers
+L_0x7fb5f438f0a8 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x55df15aa6880_0 .net *"_s16", 7 0, L_0x7fb5f438f0a8;  1 drivers
+v0x55df15aa6960_0 .net *"_s17", 8 0, L_0x55df15aa7d90;  1 drivers
+v0x55df15aa6a90_0 .net *"_s3", 8 0, L_0x55df15aa7820;  1 drivers
+L_0x7fb5f438f018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55df15aa6b70_0 .net *"_s6", 0 0, L_0x7fb5f438f018;  1 drivers
+v0x55df15aa6c50_0 .net *"_s7", 8 0, L_0x55df15aa7960;  1 drivers
+v0x55df15aa6d30_0 .net "carry_in", 0 0, v0x55df15aa71f0_0;  1 drivers
+v0x55df15aa6df0_0 .net "carry_out", 0 0, L_0x55df15aa75f0;  alias, 1 drivers
+v0x55df15aa6eb0_0 .net "x", 7 0, v0x55df15aa7380_0;  1 drivers
+v0x55df15aa6f90_0 .net "y", 7 0, v0x55df15aa7480_0;  1 drivers
+v0x55df15aa7070_0 .net "z", 7 0, L_0x55df15aa76e0;  alias, 1 drivers
+L_0x55df15aa75f0 .part L_0x55df15aa7d90, 8, 1;
+L_0x55df15aa76e0 .part L_0x55df15aa7d90, 0, 8;
+L_0x55df15aa7820 .concat [ 8 1 0 0], v0x55df15aa7380_0, L_0x7fb5f438f018;
+L_0x55df15aa7960 .concat [ 8 1 0 0], v0x55df15aa7480_0, L_0x7fb5f438f060;
+L_0x55df15aa7ad0 .arith/sum 9, L_0x55df15aa7820, L_0x55df15aa7960;
+L_0x55df15aa7c10 .concat [ 1 8 0 0], v0x55df15aa71f0_0, L_0x7fb5f438f0a8;
+L_0x55df15aa7d90 .arith/sum 9, L_0x55df15aa7ad0, L_0x55df15aa7c10;
+    .scope S_0x55df15a916a0;
+T_0 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55df15aa7380_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55df15aa7480_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55df15aa71f0_0, 0, 1;
+    %delay 8000, 0;
+    %vpi_call 2 29 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55df15a916a0;
+T_1 ;
+T_1.0 ;
+    %delay 1000, 0;
+    %vpi_func 2 34 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x55df15aa7380_0, 0, 8;
+    %vpi_func 2 35 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x55df15aa7480_0, 0, 8;
+    %vpi_func 2 37 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000000000001 {0 0 0};
+    %pad/u 1;
+    %store/vec4 v0x55df15aa71f0_0, 0, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_0x55df15a916a0;
+T_2 ;
+    %vpi_call 2 41 "$dumpfile", "wave.vcd" {0 0 0};
+    %vpi_call 2 42 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "adder.sv";

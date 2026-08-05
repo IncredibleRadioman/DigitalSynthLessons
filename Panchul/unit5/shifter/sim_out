@@ -1,0 +1,126 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55b8c3ad7d00 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -12;
+v0x55b8c3af6660_0 .var "shamt", 2 0;
+v0x55b8c3af6720_0 .var "x", 7 0;
+v0x55b8c3af67e0_0 .net "y_lrot", 7 0, L_0x55b8c3af6e50;  1 drivers
+v0x55b8c3af68b0_0 .net "y_lsh", 7 0, L_0x55b8c3af6af0;  1 drivers
+v0x55b8c3af6980_0 .net "y_rrot", 7 0, L_0x55b8c3af7120;  1 drivers
+v0x55b8c3af6a20_0 .net "y_rsh", 7 0, L_0x55b8c3af6b90;  1 drivers
+S_0x55b8c3ad7e80 .scope module, "dut1" "left_shifter" 2 20, 3 1 0, S_0x55b8c3ad7d00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 3 "shamt"
+    .port_info 2 /OUTPUT 8 "z"
+P_0x55b8c3ac81f0 .param/l "SHIFT" 0 3 3, +C4<00000000000000000000000000000011>;
+P_0x55b8c3ac8230 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000001000>;
+v0x55b8c3ad94a0_0 .net "shamt", 2 0, v0x55b8c3af6660_0;  1 drivers
+v0x55b8c3af4d80_0 .net "x", 7 0, v0x55b8c3af6720_0;  1 drivers
+v0x55b8c3af4e60_0 .net "z", 7 0, L_0x55b8c3af6af0;  alias, 1 drivers
+L_0x55b8c3af6af0 .shift/l 8, v0x55b8c3af6720_0, v0x55b8c3af6660_0;
+S_0x55b8c3af4fa0 .scope module, "dut2" "right_shifter" 2 29, 4 1 0, S_0x55b8c3ad7d00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 3 "shamt"
+    .port_info 2 /OUTPUT 8 "z"
+P_0x55b8c3ab34c0 .param/l "SHIFT" 0 4 3, +C4<00000000000000000000000000000011>;
+P_0x55b8c3ab3500 .param/l "WIDTH" 0 4 2, +C4<00000000000000000000000000001000>;
+v0x55b8c3af5290_0 .net "shamt", 2 0, v0x55b8c3af6660_0;  alias, 1 drivers
+v0x55b8c3af53a0_0 .net "x", 7 0, v0x55b8c3af6720_0;  alias, 1 drivers
+v0x55b8c3af5470_0 .net "z", 7 0, L_0x55b8c3af6b90;  alias, 1 drivers
+L_0x55b8c3af6b90 .shift/r 8, v0x55b8c3af6720_0, v0x55b8c3af6660_0;
+S_0x55b8c3af55c0 .scope module, "dut3" "left_rotator" 2 38, 5 1 0, S_0x55b8c3ad7d00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 3 "shamt"
+    .port_info 2 /OUTPUT 8 "z"
+P_0x55b8c3ac7570 .param/l "SHIFT" 0 5 3, +C4<00000000000000000000000000000011>;
+P_0x55b8c3ac75b0 .param/l "WIDTH" 0 5 2, +C4<00000000000000000000000000001000>;
+v0x55b8c3af5910_0 .net *"_s0", 15 0, L_0x55b8c3af6ca0;  1 drivers
+v0x55b8c3af59f0_0 .net "shamt", 2 0, v0x55b8c3af6660_0;  alias, 1 drivers
+v0x55b8c3af5b00_0 .net "temp", 15 0, L_0x55b8c3af6d60;  1 drivers
+v0x55b8c3af5bc0_0 .net "x", 7 0, v0x55b8c3af6720_0;  alias, 1 drivers
+v0x55b8c3af5cd0_0 .net "z", 7 0, L_0x55b8c3af6e50;  alias, 1 drivers
+L_0x55b8c3af6ca0 .concat [ 8 8 0 0], v0x55b8c3af6720_0, v0x55b8c3af6720_0;
+L_0x55b8c3af6d60 .shift/l 16, L_0x55b8c3af6ca0, v0x55b8c3af6660_0;
+L_0x55b8c3af6e50 .part L_0x55b8c3af6d60, 8, 8;
+S_0x55b8c3af5e80 .scope module, "dut4" "right_rotator" 2 47, 6 1 0, S_0x55b8c3ad7d00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 3 "shamt"
+    .port_info 2 /OUTPUT 8 "z"
+P_0x55b8c3ac74e0 .param/l "SHIFT" 0 6 3, +C4<00000000000000000000000000000011>;
+P_0x55b8c3ac7520 .param/l "WIDTH" 0 6 2, +C4<00000000000000000000000000001000>;
+v0x55b8c3af6140_0 .net *"_s0", 15 0, L_0x55b8c3af6f90;  1 drivers
+v0x55b8c3af6240_0 .net "shamt", 2 0, v0x55b8c3af6660_0;  alias, 1 drivers
+v0x55b8c3af6300_0 .net "temp", 15 0, L_0x55b8c3af7030;  1 drivers
+v0x55b8c3af63f0_0 .net "x", 7 0, v0x55b8c3af6720_0;  alias, 1 drivers
+v0x55b8c3af64b0_0 .net "z", 7 0, L_0x55b8c3af7120;  alias, 1 drivers
+L_0x55b8c3af6f90 .concat [ 8 8 0 0], v0x55b8c3af6720_0, v0x55b8c3af6720_0;
+L_0x55b8c3af7030 .shift/r 16, L_0x55b8c3af6f90, v0x55b8c3af6660_0;
+L_0x55b8c3af7120 .part L_0x55b8c3af7030, 0, 8;
+    .scope S_0x55b8c3ad7d00;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "wave.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55b8c3ad7d00;
+T_1 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 231, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 156, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %delay 10000, 0;
+    %pushi/vec4 232, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 22, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 248, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 17, 0, 8;
+    %store/vec4 v0x55b8c3af6720_0, 0, 8;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x55b8c3af6660_0, 0, 3;
+    %delay 10000, 0;
+    %vpi_call 2 77 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "left_shifter.sv";
+    "right_shifter.sv";
+    "left_rotator.sv";
+    "right_rotator.sv";

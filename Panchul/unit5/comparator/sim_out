@@ -1,0 +1,79 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x557476780030 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -12;
+P_0x5574767b63e0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001000>;
+v0x5574767ccb00_0 .net "eq", 0 0, L_0x5574767cd140;  1 drivers
+v0x5574767ccbc0_0 .net "gt", 0 0, L_0x5574767cd580;  1 drivers
+v0x5574767ccc60_0 .net "gte", 0 0, L_0x5574767cd620;  1 drivers
+v0x5574767ccd60_0 .net "lt", 0 0, L_0x5574767cd3c0;  1 drivers
+v0x5574767cce30_0 .net "lte", 0 0, L_0x5574767cd4b0;  1 drivers
+v0x5574767cced0_0 .net "neq", 0 0, L_0x5574767cd2d0;  1 drivers
+v0x5574767ccfa0_0 .var "x", 7 0;
+v0x5574767cd070_0 .var "y", 7 0;
+S_0x557476780200 .scope module, "dut" "comparator" 2 17, 3 1 0, S_0x557476780030;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x"
+    .port_info 1 /INPUT 8 "y"
+    .port_info 2 /OUTPUT 1 "eq"
+    .port_info 3 /OUTPUT 1 "neq"
+    .port_info 4 /OUTPUT 1 "lt"
+    .port_info 5 /OUTPUT 1 "lte"
+    .port_info 6 /OUTPUT 1 "gt"
+    .port_info 7 /OUTPUT 1 "gte"
+P_0x5574767803d0 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000001000>;
+v0x5574767b7850_0 .net "eq", 0 0, L_0x5574767cd140;  alias, 1 drivers
+v0x5574767cc400_0 .net "gt", 0 0, L_0x5574767cd580;  alias, 1 drivers
+v0x5574767cc4c0_0 .net "gte", 0 0, L_0x5574767cd620;  alias, 1 drivers
+v0x5574767cc560_0 .net "lt", 0 0, L_0x5574767cd3c0;  alias, 1 drivers
+v0x5574767cc620_0 .net "lte", 0 0, L_0x5574767cd4b0;  alias, 1 drivers
+v0x5574767cc730_0 .net "neq", 0 0, L_0x5574767cd2d0;  alias, 1 drivers
+v0x5574767cc7f0_0 .net "x", 7 0, v0x5574767ccfa0_0;  1 drivers
+v0x5574767cc8d0_0 .net "y", 7 0, v0x5574767cd070_0;  1 drivers
+L_0x5574767cd140 .cmp/eq 8, v0x5574767ccfa0_0, v0x5574767cd070_0;
+L_0x5574767cd2d0 .cmp/ne 8, v0x5574767ccfa0_0, v0x5574767cd070_0;
+L_0x5574767cd3c0 .cmp/gt 8, v0x5574767cd070_0, v0x5574767ccfa0_0;
+L_0x5574767cd4b0 .cmp/ge 8, v0x5574767cd070_0, v0x5574767ccfa0_0;
+L_0x5574767cd580 .cmp/gt 8, v0x5574767ccfa0_0, v0x5574767cd070_0;
+L_0x5574767cd620 .cmp/ge 8, v0x5574767ccfa0_0, v0x5574767cd070_0;
+    .scope S_0x557476780030;
+T_0 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x5574767ccfa0_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x5574767cd070_0, 0, 8;
+    %delay 8000, 0;
+    %vpi_call 2 33 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x557476780030;
+T_1 ;
+T_1.0 ;
+    %delay 1000, 0;
+    %vpi_func 2 38 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x5574767ccfa0_0, 0, 8;
+    %vpi_func 2 39 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x5574767cd070_0, 0, 8;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_0x557476780030;
+T_2 ;
+    %vpi_call 2 43 "$dumpfile", "wave.vcd" {0 0 0};
+    %vpi_call 2 44 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "comparator.sv";
