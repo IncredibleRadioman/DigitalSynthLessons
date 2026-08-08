@@ -97,8 +97,8 @@ initial begin
         y_16b = $urandom_range((1 << 16) - 1, 0);
         carry_in_16b = $urandom_range(1, 0);
 
-        x_32b = $urandom_range((1 << 32) - 1, 0);
-        y_32b = $urandom_range((1 << 32) - 1, 0);
+        x_32b = $random;
+        y_32b = $random;
         carry_in_32b = $urandom_range(1, 0);
         
         x_64b = {$random, $random};
