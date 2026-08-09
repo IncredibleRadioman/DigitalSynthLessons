@@ -1,3 +1,4 @@
+//  префиксный сумматор Бретта-Кунга
 module      prefix_adder_BK #
 (
     parameter   LEVELS = 3
@@ -88,7 +89,7 @@ generate
 endgenerate
 
 assign carry = g_temp[2 * LEVELS - 1][(2**LEVELS) - 1 : 0];
-assign carry_out = g_temp[2 * LEVELS - 1][(2**LEVELS)];// | p_temp[2 * LEVELS - 1][(2**LEVELS)] & g_temp[2 * LEVELS - 1][(2**LEVELS) - 1];
+assign carry_out = g_temp[2 * LEVELS - 1][(2**LEVELS)] | p_temp[2 * LEVELS - 1][(2**LEVELS)] & g_temp[2 * LEVELS - 1][(2**LEVELS) - 1];
 
 assign z = p ^ carry;
 
