@@ -1,0 +1,7 @@
+read_verilog    reg_file.sv
+hierarchy   -top    reg_file    -chparam    DATA_WIDTH 4
+proc
+opt_expr
+opt_clean
+techmap -map +/adff2dff.v
+show -colors 2 -width -signed -format dot -viewer xdot reg_file

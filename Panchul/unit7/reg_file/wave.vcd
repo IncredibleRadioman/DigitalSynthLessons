@@ -1,0 +1,213 @@
+$date
+	Sun Aug 30 20:37:03 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 4 ! data_out [3:0] $end
+$var reg 2 " addr [1:0] $end
+$var reg 1 # clk $end
+$var reg 4 $ data_in [3:0] $end
+$var reg 1 % we $end
+$scope module dut $end
+$var wire 2 & addr [1:0] $end
+$var wire 1 # clk $end
+$var wire 4 ' data_in [3:0] $end
+$var wire 4 ( data_out [3:0] $end
+$var wire 1 % we $end
+$var wire 4 ) reg3 [3:0] $end
+$var wire 4 * reg2 [3:0] $end
+$var wire 4 + reg1 [3:0] $end
+$var wire 4 , reg0 [3:0] $end
+$var wire 3 - mux_in [2:0] $end
+$var parameter 32 . DATA_WIDTH $end
+$var reg 4 / mux_out [3:0] $end
+$var reg 4 0 w_we [3:0] $end
+$scope module register0 $end
+$var wire 1 # clk $end
+$var wire 4 1 d [3:0] $end
+$var wire 1 2 ena $end
+$var parameter 32 3 SIZE $end
+$var reg 4 4 q [3:0] $end
+$upscope $end
+$scope module register1 $end
+$var wire 1 # clk $end
+$var wire 4 5 d [3:0] $end
+$var wire 1 6 ena $end
+$var parameter 32 7 SIZE $end
+$var reg 4 8 q [3:0] $end
+$upscope $end
+$scope module register2 $end
+$var wire 1 # clk $end
+$var wire 4 9 d [3:0] $end
+$var wire 1 : ena $end
+$var parameter 32 ; SIZE $end
+$var reg 4 < q [3:0] $end
+$upscope $end
+$scope module register3 $end
+$var wire 1 # clk $end
+$var wire 4 = d [3:0] $end
+$var wire 1 > ena $end
+$var parameter 32 ? SIZE $end
+$var reg 4 @ q [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 ?
+b100 ;
+b100 7
+b100 3
+b100 .
+$end
+#0
+$dumpvars
+bx @
+0>
+b1111 =
+bx <
+0:
+b1111 9
+bx 8
+06
+b1111 5
+bx 4
+12
+b1111 1
+b1 0
+bx /
+b100 -
+bx ,
+bx +
+bx *
+bx )
+bx (
+b1111 '
+b0 &
+1%
+b1111 $
+1#
+b0 "
+bx !
+$end
+#10
+0#
+#20
+b1111 !
+b1111 (
+b1111 /
+b1111 ,
+b1111 4
+1#
+#25
+02
+16
+bx !
+bx (
+bx /
+b10 0
+b101 -
+b1 "
+b1 &
+#30
+0#
+#40
+b1111 !
+b1111 (
+b1111 /
+b1111 +
+b1111 8
+1#
+#45
+06
+1:
+bx !
+bx (
+bx /
+b100 0
+b110 -
+b10 "
+b10 &
+#50
+0#
+#60
+b1111 !
+b1111 (
+b1111 /
+b1111 *
+b1111 <
+1#
+#65
+0:
+1>
+bx !
+bx (
+bx /
+b1000 0
+b111 -
+b11 "
+b11 &
+#70
+0#
+#80
+b1111 !
+b1111 (
+b1111 /
+b1111 )
+b1111 @
+1#
+#90
+0#
+#100
+1#
+#105
+0>
+b0 0
+b0 $
+b0 '
+b0 1
+b0 5
+b0 9
+b0 =
+b0 "
+b0 &
+b0 -
+0%
+#110
+0#
+#120
+1#
+#125
+b1 -
+b1 "
+b1 &
+#130
+0#
+#140
+1#
+#145
+b10 -
+b10 "
+b10 &
+#150
+0#
+#160
+1#
+#165
+b11 -
+b11 "
+b11 &
+#170
+0#
+#180
+1#
+#190
+0#
+#200
+1#
