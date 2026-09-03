@@ -1,0 +1,102 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5cafa7211b00 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -9;
+v0x5cafa72271b0_0 .var "addr", 5 0;
+v0x5cafa72272c0_0 .net "addr_out", 5 0, L_0x5cafa7227950;  1 drivers
+v0x5cafa7227390_0 .var "clk", 0 0;
+v0x5cafa7227490_0 .net "data_out", 3 0, L_0x5cafa7227840;  1 drivers
+v0x5cafa7227560_0 .var/i "i", 31 0;
+S_0x5cafa7211c90 .scope module, "dut" "rom_parametric" 2 12, 3 1 0, S_0x5cafa7211b00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 6 "addr";
+    .port_info 2 /OUTPUT 4 "data_out";
+    .port_info 3 /OUTPUT 6 "addr_out";
+P_0x5cafa71fcd00 .param/l "ADDR_WIDTH" 0 3 3, +C4<00000000000000000000000000000110>;
+P_0x5cafa71fcd40 .param/l "DATA_WIDTH" 0 3 2, +C4<00000000000000000000000000000100>;
+L_0x5cafa7227840 .functor BUFZ 4, L_0x5cafa7227600, C4<0000>, C4<0000>, C4<0000>;
+L_0x5cafa7227950 .functor BUFZ 6, v0x5cafa7226df0_0, C4<000000>, C4<000000>, C4<000000>;
+v0x5cafa71fbf00_0 .net *"_ivl_0", 3 0, L_0x5cafa7227600;  1 drivers
+v0x5cafa7226a10_0 .net *"_ivl_2", 7 0, L_0x5cafa72276d0;  1 drivers
+L_0x7fc8902d8018 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x5cafa7226af0_0 .net *"_ivl_5", 1 0, L_0x7fc8902d8018;  1 drivers
+v0x5cafa7226be0_0 .net "addr", 5 0, v0x5cafa72271b0_0;  1 drivers
+v0x5cafa7226cc0_0 .net "addr_out", 5 0, L_0x5cafa7227950;  alias, 1 drivers
+v0x5cafa7226df0_0 .var "addr_reg", 5 0;
+v0x5cafa7226ed0_0 .net "clk", 0 0, v0x5cafa7227390_0;  1 drivers
+v0x5cafa7226f90_0 .net "data_out", 3 0, L_0x5cafa7227840;  alias, 1 drivers
+v0x5cafa7227070 .array "rom", 63 0, 3 0;
+E_0x5cafa720fec0 .event posedge, v0x5cafa7226ed0_0;
+L_0x5cafa7227600 .array/port v0x5cafa7227070, L_0x5cafa72276d0;
+L_0x5cafa72276d0 .concat [ 6 2 0 0], v0x5cafa7226df0_0, L_0x7fc8902d8018;
+    .scope S_0x5cafa7211c90;
+T_0 ;
+    %vpi_call 3 18 "$readmemh", "rom.txt", v0x5cafa7227070 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x5cafa7211c90;
+T_1 ;
+    %wait E_0x5cafa720fec0;
+    %load/vec4 v0x5cafa7226be0_0;
+    %assign/vec4 v0x5cafa7226df0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x5cafa7211b00;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5cafa7227390_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 6;
+    %store/vec4 v0x5cafa72271b0_0, 0, 6;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x5cafa7227560_0, 0, 32;
+T_2.0 ;
+    %load/vec4 v0x5cafa7227560_0;
+    %cmpi/s 16, 0, 32;
+    %flag_or 5, 4;
+    %jmp/0xz T_2.1, 5;
+    %delay 20, 0;
+    %load/vec4 v0x5cafa72271b0_0;
+    %addi 1, 0, 6;
+    %store/vec4 v0x5cafa72271b0_0, 0, 6;
+    %load/vec4 v0x5cafa7227560_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x5cafa7227560_0, 0, 32;
+    %jmp T_2.0;
+T_2.1 ;
+    %end;
+    .thread T_2;
+    .scope S_0x5cafa7211b00;
+T_3 ;
+    %delay 10, 0;
+    %load/vec4 v0x5cafa7227390_0;
+    %inv;
+    %store/vec4 v0x5cafa7227390_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x5cafa7211b00;
+T_4 ;
+    %delay 380, 0;
+    %vpi_call 2 32 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_0x5cafa7211b00;
+T_5 ;
+    %vpi_call 2 36 "$dumpfile", "wave.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "rom_parametric.sv";
