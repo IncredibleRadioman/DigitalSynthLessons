@@ -1,0 +1,86 @@
+$date
+	Sat Sep 12 15:33:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 6 ! y [5:0] $end
+$var reg 3 " a [2:0] $end
+$var reg 3 # b [2:0] $end
+$var reg 1 $ clk $end
+$scope module dut $end
+$var wire 3 % a [2:0] $end
+$var wire 3 & b [2:0] $end
+$var wire 1 $ clk $end
+$var wire 6 ' y [5:0] $end
+$var reg 6 ( addr [5:0] $end
+$var reg 6 ) addr_gen [5:0] $end
+$var integer 32 * i [31:0] $end
+$var integer 32 + j [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000 +
+b1000 *
+b111111 )
+b0 (
+b0 '
+b0 &
+b0 %
+1$
+b0 #
+b0 "
+b0 !
+$end
+#10
+0$
+#20
+b1110 !
+b1110 '
+b111010 (
+1$
+b111 #
+b111 &
+b10 "
+b10 %
+#30
+0$
+#40
+b1111 !
+b1111 '
+b101011 (
+1$
+b101 #
+b101 &
+b11 "
+b11 %
+#50
+0$
+#60
+b100011 !
+b100011 '
+b101111 (
+1$
+b111 "
+b111 %
+#70
+0$
+#80
+b11000 !
+b11000 '
+b100110 (
+1$
+b100 #
+b100 &
+b110 "
+b110 %
+#90
+0$
+#100
+1$

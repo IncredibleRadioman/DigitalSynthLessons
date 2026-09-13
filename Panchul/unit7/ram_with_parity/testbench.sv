@@ -8,9 +8,9 @@ reg     we;
 reg     clk;
 wire    [3:0] data_out;
 wire    [5:0] addr_out;
+wire    parity_error;
 
-
-ram_parametric #(
+ram_with_parity #(
     .DATA_WIDTH(4),
     .ADDR_WIDTH(6)
 ) dut (
@@ -19,7 +19,8 @@ ram_parametric #(
     .we(we),
     .clk(clk),
     .data_out(data_out),
-    .addr_out(addr_out)
+    .addr_out(addr_out),
+    .parity_error(parity_error)
 );
 
 initial begin

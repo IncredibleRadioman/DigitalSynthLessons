@@ -1,0 +1,864 @@
+$date
+	Sat Sep 12 13:05:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 32 ! data_out [31:0] $end
+$var reg 5 " addr [4:0] $end
+$var reg 1 # clk $end
+$var reg 32 $ data_in [31:0] $end
+$var reg 1 % we $end
+$scope module dut $end
+$var wire 5 & addr [4:0] $end
+$var wire 1 # clk $end
+$var wire 32 ' data_in [31:0] $end
+$var wire 1 % we $end
+$var reg 32 ( data_out [31:0] $end
+$var reg 32 ) w_we [31:0] $end
+$scope begin reg_blocks[0] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 * d [31:0] $end
+$var wire 1 + ena $end
+$var reg 32 , q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[1] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 - d [31:0] $end
+$var wire 1 . ena $end
+$var reg 32 / q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[2] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 0 d [31:0] $end
+$var wire 1 1 ena $end
+$var reg 32 2 q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[3] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 3 d [31:0] $end
+$var wire 1 4 ena $end
+$var reg 32 5 q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[4] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 6 d [31:0] $end
+$var wire 1 7 ena $end
+$var reg 32 8 q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[5] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 9 d [31:0] $end
+$var wire 1 : ena $end
+$var reg 32 ; q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[6] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 < d [31:0] $end
+$var wire 1 = ena $end
+$var reg 32 > q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[7] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 ? d [31:0] $end
+$var wire 1 @ ena $end
+$var reg 32 A q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[8] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 B d [31:0] $end
+$var wire 1 C ena $end
+$var reg 32 D q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[9] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 E d [31:0] $end
+$var wire 1 F ena $end
+$var reg 32 G q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[10] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 H d [31:0] $end
+$var wire 1 I ena $end
+$var reg 32 J q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[11] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 K d [31:0] $end
+$var wire 1 L ena $end
+$var reg 32 M q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[12] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 N d [31:0] $end
+$var wire 1 O ena $end
+$var reg 32 P q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[13] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 Q d [31:0] $end
+$var wire 1 R ena $end
+$var reg 32 S q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[14] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 T d [31:0] $end
+$var wire 1 U ena $end
+$var reg 32 V q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[15] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 W d [31:0] $end
+$var wire 1 X ena $end
+$var reg 32 Y q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[16] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 Z d [31:0] $end
+$var wire 1 [ ena $end
+$var reg 32 \ q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[17] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 ] d [31:0] $end
+$var wire 1 ^ ena $end
+$var reg 32 _ q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[18] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 ` d [31:0] $end
+$var wire 1 a ena $end
+$var reg 32 b q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[19] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 c d [31:0] $end
+$var wire 1 d ena $end
+$var reg 32 e q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[20] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 f d [31:0] $end
+$var wire 1 g ena $end
+$var reg 32 h q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[21] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 i d [31:0] $end
+$var wire 1 j ena $end
+$var reg 32 k q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[22] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 l d [31:0] $end
+$var wire 1 m ena $end
+$var reg 32 n q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[23] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 o d [31:0] $end
+$var wire 1 p ena $end
+$var reg 32 q q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[24] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 r d [31:0] $end
+$var wire 1 s ena $end
+$var reg 32 t q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[25] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 u d [31:0] $end
+$var wire 1 v ena $end
+$var reg 32 w q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[26] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 x d [31:0] $end
+$var wire 1 y ena $end
+$var reg 32 z q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[27] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 { d [31:0] $end
+$var wire 1 | ena $end
+$var reg 32 } q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[28] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 ~ d [31:0] $end
+$var wire 1 !" ena $end
+$var reg 32 "" q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[29] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 #" d [31:0] $end
+$var wire 1 $" ena $end
+$var reg 32 %" q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[30] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 &" d [31:0] $end
+$var wire 1 '" ena $end
+$var reg 32 (" q [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin reg_blocks[31] $end
+$scope module i_register $end
+$var wire 1 # clk $end
+$var wire 32 )" d [31:0] $end
+$var wire 1 *" ena $end
+$var reg 32 +" q [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +"
+0*"
+b0 )"
+bx ("
+0'"
+b0 &"
+bx %"
+0$"
+b0 #"
+bx ""
+0!"
+b0 ~
+bx }
+0|
+b0 {
+bx z
+0y
+b0 x
+bx w
+0v
+b0 u
+bx t
+0s
+b0 r
+bx q
+0p
+b0 o
+bx n
+0m
+b0 l
+bx k
+0j
+b0 i
+bx h
+0g
+b0 f
+bx e
+0d
+b0 c
+bx b
+0a
+b0 `
+bx _
+0^
+b0 ]
+bx \
+0[
+b0 Z
+bx Y
+0X
+b0 W
+bx V
+0U
+b0 T
+bx S
+0R
+b0 Q
+bx P
+0O
+b0 N
+bx M
+0L
+b0 K
+bx J
+0I
+b0 H
+bx G
+0F
+b0 E
+bx D
+0C
+b0 B
+bx A
+0@
+b0 ?
+bx >
+0=
+b0 <
+bx ;
+0:
+b0 9
+bx 8
+07
+b0 6
+bx 5
+04
+b0 3
+bx 2
+01
+b0 0
+bx /
+0.
+b0 -
+bx ,
+1+
+b0 *
+b1 )
+bx (
+b0 '
+b0 &
+1%
+b0 $
+1#
+b0 "
+bx !
+$end
+#10
+0#
+#20
+b0 !
+b0 (
+b0 ,
+1#
+#25
+1.
+0+
+bx !
+bx (
+b10 )
+b1 $
+b1 '
+b1 *
+b1 -
+b1 0
+b1 3
+b1 6
+b1 9
+b1 <
+b1 ?
+b1 B
+b1 E
+b1 H
+b1 K
+b1 N
+b1 Q
+b1 T
+b1 W
+b1 Z
+b1 ]
+b1 `
+b1 c
+b1 f
+b1 i
+b1 l
+b1 o
+b1 r
+b1 u
+b1 x
+b1 {
+b1 ~
+b1 #"
+b1 &"
+b1 )"
+b1 "
+b1 &
+#30
+0#
+#40
+b1 !
+b1 (
+b1 /
+1#
+#45
+11
+0.
+bx !
+bx (
+b100 )
+b10 $
+b10 '
+b10 *
+b10 -
+b10 0
+b10 3
+b10 6
+b10 9
+b10 <
+b10 ?
+b10 B
+b10 E
+b10 H
+b10 K
+b10 N
+b10 Q
+b10 T
+b10 W
+b10 Z
+b10 ]
+b10 `
+b10 c
+b10 f
+b10 i
+b10 l
+b10 o
+b10 r
+b10 u
+b10 x
+b10 {
+b10 ~
+b10 #"
+b10 &"
+b10 )"
+b10 "
+b10 &
+#50
+0#
+#60
+b10 !
+b10 (
+b10 2
+1#
+#65
+14
+01
+bx !
+bx (
+b1000 )
+b11 $
+b11 '
+b11 *
+b11 -
+b11 0
+b11 3
+b11 6
+b11 9
+b11 <
+b11 ?
+b11 B
+b11 E
+b11 H
+b11 K
+b11 N
+b11 Q
+b11 T
+b11 W
+b11 Z
+b11 ]
+b11 `
+b11 c
+b11 f
+b11 i
+b11 l
+b11 o
+b11 r
+b11 u
+b11 x
+b11 {
+b11 ~
+b11 #"
+b11 &"
+b11 )"
+b11 "
+b11 &
+#70
+0#
+#80
+b11 !
+b11 (
+b11 5
+1#
+#85
+17
+04
+bx !
+bx (
+b10000 )
+b100 $
+b100 '
+b100 *
+b100 -
+b100 0
+b100 3
+b100 6
+b100 9
+b100 <
+b100 ?
+b100 B
+b100 E
+b100 H
+b100 K
+b100 N
+b100 Q
+b100 T
+b100 W
+b100 Z
+b100 ]
+b100 `
+b100 c
+b100 f
+b100 i
+b100 l
+b100 o
+b100 r
+b100 u
+b100 x
+b100 {
+b100 ~
+b100 #"
+b100 &"
+b100 )"
+b100 "
+b100 &
+#90
+0#
+#100
+b100 !
+b100 (
+b100 8
+1#
+#105
+1:
+07
+bx !
+bx (
+b100000 )
+b101 $
+b101 '
+b101 *
+b101 -
+b101 0
+b101 3
+b101 6
+b101 9
+b101 <
+b101 ?
+b101 B
+b101 E
+b101 H
+b101 K
+b101 N
+b101 Q
+b101 T
+b101 W
+b101 Z
+b101 ]
+b101 `
+b101 c
+b101 f
+b101 i
+b101 l
+b101 o
+b101 r
+b101 u
+b101 x
+b101 {
+b101 ~
+b101 #"
+b101 &"
+b101 )"
+b101 "
+b101 &
+#110
+0#
+#120
+b101 !
+b101 (
+b101 ;
+1#
+#125
+1=
+0:
+bx !
+bx (
+b1000000 )
+b110 $
+b110 '
+b110 *
+b110 -
+b110 0
+b110 3
+b110 6
+b110 9
+b110 <
+b110 ?
+b110 B
+b110 E
+b110 H
+b110 K
+b110 N
+b110 Q
+b110 T
+b110 W
+b110 Z
+b110 ]
+b110 `
+b110 c
+b110 f
+b110 i
+b110 l
+b110 o
+b110 r
+b110 u
+b110 x
+b110 {
+b110 ~
+b110 #"
+b110 &"
+b110 )"
+b110 "
+b110 &
+#130
+0#
+#140
+b110 !
+b110 (
+b110 >
+1#
+#145
+1@
+0=
+bx !
+bx (
+b10000000 )
+b111 $
+b111 '
+b111 *
+b111 -
+b111 0
+b111 3
+b111 6
+b111 9
+b111 <
+b111 ?
+b111 B
+b111 E
+b111 H
+b111 K
+b111 N
+b111 Q
+b111 T
+b111 W
+b111 Z
+b111 ]
+b111 `
+b111 c
+b111 f
+b111 i
+b111 l
+b111 o
+b111 r
+b111 u
+b111 x
+b111 {
+b111 ~
+b111 #"
+b111 &"
+b111 )"
+b111 "
+b111 &
+#150
+0#
+#160
+b111 !
+b111 (
+b111 A
+1#
+#170
+0#
+#180
+1#
+#185
+0@
+b0 !
+b0 (
+b0 )
+b0 $
+b0 '
+b0 *
+b0 -
+b0 0
+b0 3
+b0 6
+b0 9
+b0 <
+b0 ?
+b0 B
+b0 E
+b0 H
+b0 K
+b0 N
+b0 Q
+b0 T
+b0 W
+b0 Z
+b0 ]
+b0 `
+b0 c
+b0 f
+b0 i
+b0 l
+b0 o
+b0 r
+b0 u
+b0 x
+b0 {
+b0 ~
+b0 #"
+b0 &"
+b0 )"
+b0 "
+b0 &
+0%
+#190
+0#
+#200
+1#
+#205
+b1 !
+b1 (
+b1 "
+b1 &
+#210
+0#
+#220
+1#
+#225
+b10 !
+b10 (
+b10 "
+b10 &
+#230
+0#
+#240
+1#
+#245
+b11 !
+b11 (
+b11 "
+b11 &
+#250
+0#
+#260
+1#
+#265
+b100 !
+b100 (
+b100 "
+b100 &
+#270
+0#
+#280
+1#
+#285
+b101 !
+b101 (
+b101 "
+b101 &
+#290
+0#
+#300
+1#
+#305
+b110 !
+b110 (
+b110 "
+b110 &
+#310
+0#
+#320
+1#
+#325
+b111 !
+b111 (
+b111 "
+b111 &
+#330
+0#
+#340
+1#
+#350
+0#
+#360
+1#
+#370
+0#
+#380
+1#
+#390
+0#
+#400
+1#

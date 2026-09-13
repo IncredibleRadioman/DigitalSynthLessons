@@ -1,0 +1,130 @@
+$date
+	Sat Sep 12 12:01:43 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 8 ! read_data [7:0] $end
+$var reg 1 " clk $end
+$var reg 1 # pop $end
+$var reg 1 $ push $end
+$var reg 1 % reset $end
+$var reg 8 & write_data [7:0] $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # pop $end
+$var wire 1 $ push $end
+$var wire 1 ' rst_n $end
+$var wire 8 ( write_data [7:0] $end
+$var reg 8 ) read_data [7:0] $end
+$var reg 4 * read_pointer [3:0] $end
+$var reg 4 + write_pointer [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 +
+b0 *
+bx )
+b0 (
+0'
+b0 &
+1%
+1$
+0#
+1"
+bx !
+$end
+#10
+0"
+#20
+1"
+b1 &
+b1 (
+#30
+1'
+0"
+0%
+#40
+b1 +
+1"
+b10 &
+b10 (
+#50
+0"
+#60
+b10 +
+1"
+b11 &
+b11 (
+#70
+0"
+#80
+b11 +
+1"
+b100 &
+b100 (
+#90
+0"
+#100
+b100 +
+1"
+b101 &
+b101 (
+#110
+0"
+#120
+b1 *
+b10 !
+b10 )
+1"
+1#
+0$
+b110 &
+b110 (
+#130
+0"
+#140
+b10 *
+b11 !
+b11 )
+1"
+b111 &
+b111 (
+#150
+0"
+#160
+b11 *
+b100 !
+b100 )
+1"
+b1000 &
+b1000 (
+#170
+0"
+#180
+b100 *
+b101 !
+b101 )
+1"
+b1001 &
+b1001 (
+#190
+0"
+#200
+b101 *
+bx !
+bx )
+1"
+b1011 &
+b1011 (
+#210
+0"
+#220
+b110 *
+1"

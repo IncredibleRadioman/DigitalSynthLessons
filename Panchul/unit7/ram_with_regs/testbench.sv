@@ -2,17 +2,16 @@
 
 module      testbench;
 
-reg     [3:0] data_in;
-reg     [5:0] addr;
+reg     [7:0] data_in;
+reg     [15:0] addr;
 reg     we;
 reg     clk;
-wire    [3:0] data_out;
-wire    [5:0] addr_out;
+wire    [7:0] data_out;
+wire    [15:0] addr_out;
 
-
-ram_parametric #(
-    .DATA_WIDTH(4),
-    .ADDR_WIDTH(6)
+ram_with_regs #(
+    .DATA_WIDTH(8),
+    .ADDR_WIDTH(16)
 ) dut (
     .data_in(data_in),
     .addr(addr),
