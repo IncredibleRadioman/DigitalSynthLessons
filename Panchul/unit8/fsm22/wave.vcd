@@ -1,0 +1,163 @@
+$date
+	Sun Sep 20 17:01:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 2 ! state [1:0] $end
+$var wire 2 " state_mealey [1:0] $end
+$var wire 2 # y_mealey [1:0] $end
+$var wire 2 $ y [1:0] $end
+$var reg 2 % a [1:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' enable $end
+$var reg 1 ( reset_n $end
+$scope module dut $end
+$var wire 2 ) a [1:0] $end
+$var wire 1 & clk $end
+$var wire 1 ' enable $end
+$var wire 1 ( reset_n $end
+$var reg 2 * next_state [1:0] $end
+$var reg 2 + state [1:0] $end
+$var reg 2 , y [1:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 2 - a [1:0] $end
+$var wire 1 & clk $end
+$var wire 1 ' enable $end
+$var wire 1 ( reset_n $end
+$var reg 2 . next_state [1:0] $end
+$var reg 2 / state [1:0] $end
+$var reg 2 0 y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 0
+b0 /
+b1 .
+b10 -
+bx ,
+b0 +
+b1 *
+b10 )
+0(
+0'
+1&
+b10 %
+bx $
+bx #
+b0 "
+b0 !
+$end
+#10
+0&
+#20
+b1 #
+b1 0
+b1 $
+b1 ,
+1&
+#30
+0&
+#40
+1&
+1(
+#50
+0&
+1'
+#60
+b11 .
+b11 *
+b1 "
+b1 /
+b1 !
+b1 +
+1&
+#70
+b10 *
+b10 .
+0&
+b0 %
+b0 )
+b0 -
+#80
+b0 $
+b0 ,
+b0 #
+b0 0
+b10 !
+b10 +
+b10 "
+b10 /
+1&
+#90
+0&
+#100
+1&
+#110
+b11 *
+b11 .
+0&
+b1 %
+b1 )
+b1 -
+#120
+b0 *
+b0 .
+b11 !
+b11 +
+b11 "
+b11 /
+1&
+#130
+0&
+b11 %
+b11 )
+b11 -
+#140
+b11 .
+b11 *
+b10 #
+b10 0
+b10 $
+b10 ,
+b0 "
+b0 /
+b0 !
+b0 +
+1&
+#150
+0&
+#160
+b0 *
+b0 .
+b0 $
+b0 ,
+b0 #
+b0 0
+b11 !
+b11 +
+b11 "
+b11 /
+1&
+#170
+0&
+0'
+#180
+b10 #
+b10 0
+b10 $
+b10 ,
+1&
+#190
+0&
+#200
+1&
+#210
+0&

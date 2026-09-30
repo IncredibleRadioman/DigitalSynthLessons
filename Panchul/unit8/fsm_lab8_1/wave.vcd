@@ -1,0 +1,128 @@
+$date
+	Sat Sep 19 19:43:22 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 2 ! state [1:0] $end
+$var wire 1 " y $end
+$var reg 1 # a $end
+$var reg 1 $ clk $end
+$var reg 1 % enable $end
+$var reg 1 & reset_n $end
+$scope module dut $end
+$var wire 1 # a $end
+$var wire 1 $ clk $end
+$var wire 1 % enable $end
+$var wire 1 & reset_n $end
+$var wire 1 " y $end
+$var reg 2 ' next_state [1:0] $end
+$var reg 2 ( state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b1 '
+0&
+1%
+1$
+1#
+0"
+b0 !
+$end
+#10
+0$
+0%
+1&
+#20
+1$
+#30
+b0 '
+0$
+1%
+0#
+#40
+1$
+#50
+b1 '
+0$
+1#
+#60
+b10 '
+1"
+b1 !
+b1 (
+1$
+#70
+0$
+0%
+#80
+1$
+#90
+b1 '
+0$
+1%
+0#
+#100
+1$
+#110
+b10 '
+0$
+1#
+#120
+b0 '
+b10 !
+b10 (
+1$
+#130
+0$
+0%
+#140
+1$
+#150
+b10 '
+0$
+1%
+0#
+#160
+1$
+#170
+b0 '
+0$
+1#
+#180
+b1 '
+0"
+b0 !
+b0 (
+1$
+#190
+0$
+0%
+#200
+1$
+#210
+b0 '
+0$
+1%
+0#
+#220
+1$
+#230
+b1 '
+0$
+1#
+#240
+b10 '
+1"
+b1 !
+b1 (
+1$
+#250
+0$

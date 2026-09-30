@@ -1,0 +1,91 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x555f8c960100 .scope module, "pow_5_multi_cycle_always" "pow_5_multi_cycle_always" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "rst_n"
+    .port_info 2 /INPUT 1 "arg_vld"
+    .port_info 3 /INPUT 8 "arg"
+    .port_info 4 /OUTPUT 1 "res_vld"
+    .port_info 5 /OUTPUT 8 "res"
+P_0x555f8c960280 .param/l "w" 0 2 4, +C4<00000000000000000000000000001000>;
+L_0x555f8c960540 .functor BUFZ 8, v0x555f8c9a9820_0, C4<00000000>, C4<00000000>, C4<00000000>;
+o0x7f0ee564c018 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x555f8c9747e0_0 .net "arg", 7 0, o0x7f0ee564c018;  0 drivers
+o0x7f0ee564c048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x555f8c9a93a0_0 .net "arg_vld", 0 0, o0x7f0ee564c048;  0 drivers
+o0x7f0ee564c078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x555f8c9a9460_0 .net "clk", 0 0, o0x7f0ee564c078;  0 drivers
+v0x555f8c9a9530_0 .var "mul_q_stage1", 7 0;
+v0x555f8c9a9610_0 .var "mul_q_stage2", 7 0;
+v0x555f8c9a9740_0 .var "mul_q_stage3", 7 0;
+v0x555f8c9a9820_0 .var "mul_q_stage4", 7 0;
+v0x555f8c9a9900_0 .net "res", 7 0, L_0x555f8c960540;  1 drivers
+v0x555f8c9a99e0_0 .net "res_vld", 0 0, L_0x555f8c9a9d00;  1 drivers
+o0x7f0ee564c1c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x555f8c9a9aa0_0 .net "rst_n", 0 0, o0x7f0ee564c1c8;  0 drivers
+v0x555f8c9a9b60_0 .var "shift", 4 0;
+E_0x555f8c9609b0 .event posedge, v0x555f8c9a9460_0;
+E_0x555f8c9975a0/0 .event negedge, v0x555f8c9a9aa0_0;
+E_0x555f8c9975a0/1 .event posedge, v0x555f8c9a9460_0;
+E_0x555f8c9975a0 .event/or E_0x555f8c9975a0/0, E_0x555f8c9975a0/1;
+L_0x555f8c9a9d00 .part v0x555f8c9a9b60_0, 0, 1;
+    .scope S_0x555f8c960100;
+T_0 ;
+    %wait E_0x555f8c9975a0;
+    %load/vec4 v0x555f8c9a9aa0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 5;
+    %assign/vec4 v0x555f8c9a9b60_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x555f8c9a93a0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 8, 0, 5;
+    %assign/vec4 v0x555f8c9a9b60_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x555f8c9a9b60_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %assign/vec4 v0x555f8c9a9b60_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x555f8c960100;
+T_1 ;
+    %wait E_0x555f8c9609b0;
+    %load/vec4 v0x555f8c9747e0_0;
+    %load/vec4 v0x555f8c9747e0_0;
+    %mul;
+    %assign/vec4 v0x555f8c9a9530_0, 0;
+    %load/vec4 v0x555f8c9a9530_0;
+    %load/vec4 v0x555f8c9747e0_0;
+    %mul;
+    %assign/vec4 v0x555f8c9a9610_0, 0;
+    %load/vec4 v0x555f8c9a9610_0;
+    %load/vec4 v0x555f8c9747e0_0;
+    %mul;
+    %assign/vec4 v0x555f8c9a9740_0, 0;
+    %load/vec4 v0x555f8c9a9740_0;
+    %load/vec4 v0x555f8c9747e0_0;
+    %mul;
+    %assign/vec4 v0x555f8c9a9820_0, 0;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "pow_5_multi_cycle_always.sv";
